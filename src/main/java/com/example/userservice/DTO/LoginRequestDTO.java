@@ -8,6 +8,6 @@ import lombok.Setter;
 public class LoginRequestDTO {
 
     private String emailId;
-    private String bCryptPassword;
+    private String password;
 
 }

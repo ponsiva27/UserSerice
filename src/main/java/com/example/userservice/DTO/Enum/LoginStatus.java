@@ -5,6 +5,8 @@ public enum LoginStatus {
     LOGIN_SUCCESS,
     LOGIN_FAILS,
 
-    SUCCESS
+    LogOUT_SUCCESS,
+
+    LogOUT_FAILED
 
 }
