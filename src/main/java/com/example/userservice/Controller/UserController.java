@@ -1,10 +1,7 @@
 package com.example.userservice.Controller;
 
+import com.example.userservice.DTO.*;
 import com.example.userservice.DTO.Enum.LoginStatus;
-import com.example.userservice.DTO.LoginRequestDTO;
-import com.example.userservice.DTO.LoginResponseDTO;
-import com.example.userservice.DTO.LogoutRequestDTO;
-import com.example.userservice.DTO.SignupRequestDTO;
 import com.example.userservice.Exception.TokenInvalidException;
 import com.example.userservice.Exception.UserExistException;
 import com.example.userservice.Model.Token;
@@ -75,9 +72,10 @@ public class UserController {
     //product service will call the userService to validate the token
 
     @GetMapping("/validate/{tokenValue}")
-    public Token validateToken(@PathVariable(name ="tokenValue") String tokenValue) {
+    public UserDTO validateToken(@PathVariable(name ="tokenValue") String tokenValue) {
         Token token = userService.validateToken(tokenValue);
+        UserDTO  userDTO = UserDTO.from(token.getUser());
 
-        return token;
+        return userDTO;
     }
 }
