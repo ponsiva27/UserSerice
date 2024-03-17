@@ -10,5 +10,7 @@ public class UserServiceApplication {
 
         SpringApplication.run(UserServiceApplication.class, args);
     }
+
+
     // Start the Application with spring boot
 }
