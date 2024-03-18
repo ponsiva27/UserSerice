@@ -10,7 +10,8 @@ public class UserServiceApplication {
 
         SpringApplication.run(UserServiceApplication.class, args);
     }
+    //1. I want to use my DB for maintaining User.
+    //2. I want to add some customize data to the token.
+    //3 .I want third party API to talk to my user service.
 
-
-    // Start the Application with spring boot
 }
